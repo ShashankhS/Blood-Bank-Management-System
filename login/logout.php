@@ -1,9 +1,10 @@
 <?php
 	session_start();
 	if($_SESSION['login'] == 1){
-		$_SESSION['login'] = 0;
-		$_SESSION['user_type'] = 0;
-		$_SESSION['user_id'] = 0;
+		session_destroy();
 	}
-	header("Location: ../session/sessionexp.php");
+	echo "<script>
+	alert('User logged out. Redireting to login page');
+	window.location.href='../login/login.php';
+	</script>";
 ?>

@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Delete</title>
+	<title>Search</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 	<h3>
-		Delete existing user.
+		Searching for a donor transaction
 	</h3>
 	<div id="frm">
-		<form action = "./deletion.php" method = "POST">
+		<form action = "./search.php" method = "POST">
 			<p>
-				<label>Enter User name to be deleted: </label>
-				<input type="text" name="user_id" required>
+				<label>Enter unit number: </label>
+				<input type="text" name="unit" required>
 			</p>
 			<p>
-				<input type="submit" id="delete" value="Delete">
+				<input type="submit" id="btn" value="Search">
 			</p>
 		</form>
 	</div>

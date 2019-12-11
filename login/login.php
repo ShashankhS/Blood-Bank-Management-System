@@ -2,9 +2,12 @@
 <html>
 <head>
 	<title>Login</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="./style.css">
 </head>
 <body>
+	<h1>
+		BLOOD BANK MANAGEMENT SYSTEM
+	</h1>
 	<div id = "frm">
 		<form action = "loginChk.php" method = "POST">
 			<p>

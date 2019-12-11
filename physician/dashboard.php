@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Admin</title>	
+	<title>Physician</title>	
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<div id = "frm">
+	<div id="frm">
 		<h3>
-			Welcome Administrator
+			Welcome Physician
 		</h3>
 		<p>
-			<form action = "create.php">
-				<input type="submit" id = "btn" value="Create User">
+			<form action = "newDonor.php">
+				<input type="submit" id = "btn" value="New Donor">
 			</form>
 		</p>
 		<p>
-			<form action = "delete.php">
-				<input type="submit" id="btn" value="Delete User">
+			<form action = "newSearch.php">
+				<input type="submit" id="btn" value="Search Donor Transaction">
 			</form>
 		</p>
 		<p>
