@@ -5,9 +5,6 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<h3>
-		Creation of new user
-	</h3>
 	<div id = "frm">
 		<form action = "order.php" method = "POST">
 			<p>

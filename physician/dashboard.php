@@ -20,6 +20,11 @@
 			</form>
 		</p>
 		<p>
+			<form action = "viewAll.php">
+				<input type="submit" id="btn" value="View all Donor records">
+			</form>
+		</p>
+		<p>
 			<form action = "../login/logout.php">
 				<input type="submit" id="delete" value="Logout">
 			</form>

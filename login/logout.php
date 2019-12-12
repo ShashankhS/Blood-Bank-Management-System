@@ -5,6 +5,6 @@
 	}
 	echo "<script>
 	alert('User logged out. Redireting to login page');
-	window.location.href='../login/login.php';
+	window.location.href='../login/newLogin/login.html';
 	</script>";
 ?>
