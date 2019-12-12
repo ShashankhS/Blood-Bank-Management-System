@@ -1,37 +1,33 @@
 <?php
 	require '../connector/connect.php';
 	session_start();
-	if($_SESSION['user_type'] != 3 || $_SESSION['login'] != 1){
+	if($_SESSION['user_type'] != 4 || $_SESSION['login'] != 1){
 		header("Location: ../session/sessionexp.php");
 	}
-	$qry = "SELECT blood_no FROM tbl_donor WHERE verification = 0";
+	$qry = "SELECT b.group_name, amt.blood_amt FROM tbl_blood_grp b, tbl_group_amount amt WHERE b.blood_grp_no = amt.blood_grp_no";
 	$result = mysqli_query($con, $qry);
-	if (mysqli_num_rows($result) == 0) {
-		echo "<script>
-		alert('No new units to be verified');
-		window.location.href='./dashboard.php';
-		</script>";
-	}
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Yet to be Verified</title>
+	<title>Available Blood</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 	<div id = "frm">
-		<h2 align="center">Blood units yet to be verified</h2>
+		<h2 align="center">Blood units available</h2>
 		<table align="center" border="1">
 			<tr>
-			    <th>Blood units Pending</th>
+			    <th>Blood Group</th>
+			    <th>Units available</th>
 			</tr>
 			<?php
 				while($rows=mysqli_fetch_assoc($result)){
 			?>
 			<tr align="center">
-				<td><?php echo $rows['blood_no']; ?></td>
+				<td><?php echo $rows['group_name']; ?></td>
+				<td><?php echo $rows['blood_amt']; ?></td>
 			</tr>
 			<?php
 				}
